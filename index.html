@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Simple Vanilla JS Modal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/css/main.css">
+    </head>
+    <body>
+        <div id="main-display" class="parentcontainer">
+            <div class="headercontainer">
+                <h2 class="heading">Let's Chat!</h2>
+                <button id="openModal" class="btn">Change Username</button>
+            </div>
+            <div class="chatcontainer">
+
+              <ul id="chatMessagesList">
+              </ul>
+
+            </div>
+            <div class="messagecontainer">
+
+              <input type="text" id="chatMessageTextBox"/>
+              <button id="btnSend">Send</button>
+
+            </div>
+        </div>
+
+        <div id="usernameModal" class="modal is-hidden is-visuallyHidden">
+            <div class="modal-content">
+                <span id="closeModal" class="closebutton">&times;</span>
+                <p>Simple Modal</p>
+            </div>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="static/js/getusername.js"></script>
+        <script src="static/js/client.js"></script>
+    </body>
+</html>
